@@ -22,6 +22,8 @@ public class TableTop implements Parcelable {
     private String ages;
     private String playingTime;
 
+    public TableTop () {}
+
     public TableTop(String id, String name, int year, String publisher, String country, double latitude, double longitude, String description, String numPlayers, String ages, String playingTime) {
         this.id = id;
         this.name = name;
