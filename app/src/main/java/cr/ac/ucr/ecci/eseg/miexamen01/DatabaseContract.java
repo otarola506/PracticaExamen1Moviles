@@ -1,6 +1,6 @@
 package cr.ac.ucr.ecci.eseg.miexamen01;
 import android.provider.BaseColumns;
-
+// Clase que define la estructura de la base de datos.
 public class DatabaseContract {
 
     private DatabaseContract() {}

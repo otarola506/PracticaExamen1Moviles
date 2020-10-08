@@ -8,7 +8,7 @@ import android.os.Parcelable;
 
 import java.util.ArrayList;
 import java.util.List;
-
+// Clase TableTop que tiene los atributos respectivos de la clase e implementa TableTop.
 public class TableTop implements Parcelable {
     private String id;
     private String name;
@@ -232,7 +232,6 @@ public class TableTop implements Parcelable {
 
 
     }
-
     public List<TableTop> convertirCursorALista(Cursor cursor){
         int iId = cursor.getColumnIndex(DatabaseContract.DataBaseEntry._ID);
         int iName = cursor.getColumnIndex(DatabaseContract.DataBaseEntry.COLUMN_NAME_NAME);
