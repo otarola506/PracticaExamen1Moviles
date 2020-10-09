@@ -36,7 +36,7 @@ public class MyTableTopRecyclerViewAdapter extends RecyclerView.Adapter<MyTableT
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
         holder.idJuego.setText(mValues.get(position).getId());
-        holder.tituloJuego.setText(mValues.get(position).getName());
+        holder.nombreJuego.setText(mValues.get(position).getName());
         holder.descripcionJuego.setText(mValues.get(position).getDescription());
     }
 
@@ -50,7 +50,7 @@ public class MyTableTopRecyclerViewAdapter extends RecyclerView.Adapter<MyTableT
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
         public final TextView idJuego;
-        public final TextView tituloJuego;
+        public final TextView nombreJuego;
         public final TextView descripcionJuego;
         public TableTop mItem;
 
@@ -58,7 +58,7 @@ public class MyTableTopRecyclerViewAdapter extends RecyclerView.Adapter<MyTableT
             super(view);
             mView = view;
             idJuego= (TextView) view.findViewById(R.id.id_Juego);
-            tituloJuego = (TextView) view.findViewById(R.id.titulo);
+            nombreJuego = (TextView) view.findViewById(R.id.nombre);
             descripcionJuego= (TextView) view.findViewById(R.id.descripcion) ;
 
             view.setOnClickListener(new View.OnClickListener() {
@@ -71,7 +71,7 @@ public class MyTableTopRecyclerViewAdapter extends RecyclerView.Adapter<MyTableT
 
         @Override
         public String toString() {
-            return super.toString() + " '" + tituloJuego.getText() + "'";
+            return super.toString() + " '" + nombreJuego.getText() + "'";
         }
     }
 }
