@@ -43,7 +43,9 @@ public class TableTopFragment extends Fragment {
             mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
         }
     }
-
+    // Método que crea el fragmento al final de este inserto en la base de datos y consulto
+    //  Esto me devuelve una lista de TableTop que se la paso al Recycler Adapter para que la
+    // procese y la muestre
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -58,6 +60,7 @@ public class TableTopFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
+            // Inserto las instancias en la base de datos
             insertarBaseDatos();
             // Consulta a la base de datos para mostrar la lista de juegos
             TableTop juegos = new TableTop();
