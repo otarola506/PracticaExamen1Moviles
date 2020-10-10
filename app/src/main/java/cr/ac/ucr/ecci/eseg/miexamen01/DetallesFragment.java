@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-
+// Clase del Fragmento Detalles además maneja una instancia de TableTop
 public class DetallesFragment extends Fragment {
 
     private static final String ARG_TABLE_TOP ="table_top";
@@ -40,7 +40,7 @@ public class DetallesFragment extends Fragment {
 
         }
     }
-
+    // Se crea la vista y muestran los datos en los text view.
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -57,7 +57,24 @@ public class DetallesFragment extends Fragment {
             textDescription.setText(tableTop.getDescription());
 
             TextView textYear = (TextView) v.findViewById(R.id.textYear);
-            textYear.findViewById(tableTop.getYear());
+            textYear.setText(Integer.toString(tableTop.getYear()));
+
+            TextView textPublisher = (TextView) v.findViewById(R.id.textPublisher);
+            textPublisher.setText(tableTop.getPublisher());
+
+            TextView textCountry = (TextView) v.findViewById(R.id.textCountry);
+            textCountry.setText(tableTop.getCountry());
+
+            TextView textNumPlayers = (TextView) v.findViewById(R.id.textNumPlayers);
+            textNumPlayers.setText(tableTop.getNumPlayers());
+
+            TextView textAges = (TextView) v.findViewById(R.id.textAges);
+            textAges.setText(tableTop.getAges());
+
+            TextView textPlayingTime = (TextView) v.findViewById(R.id.textPlayingTime);
+            textPlayingTime.setText(tableTop.getPlayingTime());
+
+
 
 
 

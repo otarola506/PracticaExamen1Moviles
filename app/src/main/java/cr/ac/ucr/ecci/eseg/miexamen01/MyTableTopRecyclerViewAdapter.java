@@ -2,6 +2,7 @@ package cr.ac.ucr.ecci.eseg.miexamen01;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,10 +62,15 @@ public class MyTableTopRecyclerViewAdapter extends RecyclerView.Adapter<MyTableT
             nombreJuego = (TextView) view.findViewById(R.id.nombre);
             descripcionJuego= (TextView) view.findViewById(R.id.descripcion) ;
 
+            // Cuando se haga click en el elemento de la lista se va a redirigir a la actividad detalles pasando el objeto table top en el intent
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(view.getContext(),mItem.getName(),Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(mView.getContext(),DetallesActivity.class);
+                    // En el intent se le pasa el objeto table top
+                    intent.putExtra("table_top",mItem);
+                    mView.getContext().startActivity(intent);
                 }
             });
         }
