@@ -1,5 +1,7 @@
 package cr.ac.ucr.ecci.eseg.miexamen01;
 
+import android.Manifest;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 // Clase del Fragmento Detalles además maneja una instancia de TableTop
@@ -45,7 +48,7 @@ public class DetallesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_detalles, container, false);
+        final View v = inflater.inflate(R.layout.fragment_detalles, container, false);
         if(tableTop != null) {
             TextView textID = (TextView) v.findViewById(R.id.textID);
             textID.setText(tableTop.getId());
@@ -73,6 +76,19 @@ public class DetallesFragment extends Fragment {
 
             TextView textPlayingTime = (TextView) v.findViewById(R.id.textPlayingTime);
             textPlayingTime.setText(tableTop.getPlayingTime());
+
+            Button btnMapa = (Button) v.findViewById(R.id.btnMapa);
+
+            btnMapa.setOnClickListener(new View.OnClickListener() {
+                // Redirección a actividad de mapas
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(v.getContext(), MapsActivity.class);
+                    // En el intent se le pasa el objeto table top a la actividad de Mapas
+                    intent.putExtra(ARG_TABLE_TOP,tableTop);
+                    v.getContext().startActivity(intent);
+                }
+            });
 
 
 
