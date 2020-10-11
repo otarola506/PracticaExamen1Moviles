@@ -172,6 +172,7 @@ public class TableTop implements Parcelable {
         this.playingTime = playingTime;
     }
 
+    // Inserta una fila en la base de datos
     public void insertar( Context context){
         // usar la clase DataBaseHelper para realizar la operacion de insertar
         DataBaseHelper dataBaseHelper = new DataBaseHelper(context);
@@ -196,6 +197,7 @@ public class TableTop implements Parcelable {
                 values);
     }
 
+    // Consulta en la base de datos y devuelve una lista de TableTop
     public List<TableTop> consultar(Context context){
         DataBaseHelper dataBaseHelper = new DataBaseHelper(context);
         // Obtiene la base de datos en modo lectura
@@ -232,6 +234,7 @@ public class TableTop implements Parcelable {
 
 
     }
+    // Permite convertir un cursor pasado por parámetro a una lista de tipo TableTop
     public List<TableTop> convertirCursorALista(Cursor cursor){
         int iId = cursor.getColumnIndex(DatabaseContract.DataBaseEntry._ID);
         int iName = cursor.getColumnIndex(DatabaseContract.DataBaseEntry.COLUMN_NAME_NAME);

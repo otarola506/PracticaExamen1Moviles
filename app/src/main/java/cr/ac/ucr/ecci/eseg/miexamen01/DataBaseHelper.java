@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-// Clase que define la creación de la base de datos
+// Clase que permite crear la base de datos
 public class DataBaseHelper extends SQLiteOpenHelper {
 
     public static final int DATABASE_VERSION = 1;

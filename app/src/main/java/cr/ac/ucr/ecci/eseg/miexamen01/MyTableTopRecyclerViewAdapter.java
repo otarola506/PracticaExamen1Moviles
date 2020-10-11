@@ -36,7 +36,6 @@ public class MyTableTopRecyclerViewAdapter extends RecyclerView.Adapter<MyTableT
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.idJuego.setText(mValues.get(position).getId());
         holder.nombreJuego.setText(mValues.get(position).getName());
         holder.descripcionJuego.setText(mValues.get(position).getDescription());
     }
@@ -50,7 +49,6 @@ public class MyTableTopRecyclerViewAdapter extends RecyclerView.Adapter<MyTableT
     // Clase que representa a cada fila de la lista a cada se define el OnClick del elemento
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
-        public final TextView idJuego;
         public final TextView nombreJuego;
         public final TextView descripcionJuego;
         public TableTop mItem;
@@ -58,7 +56,6 @@ public class MyTableTopRecyclerViewAdapter extends RecyclerView.Adapter<MyTableT
         public ViewHolder(View view) {
             super(view);
             mView = view;
-            idJuego= (TextView) view.findViewById(R.id.id_Juego);
             nombreJuego = (TextView) view.findViewById(R.id.nombre);
             descripcionJuego= (TextView) view.findViewById(R.id.descripcion) ;
 

@@ -10,6 +10,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+// Actividad de tipo Maps Actividad de Google Maps
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -27,8 +28,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        // Recupero el objeto table top que me pasa el fragmento de detalles
        Bundle b = getIntent().getExtras();
-       // Recupero el objeto table top que me pasa el fragmento de detalles
        if(b != null){
            tableTop = b.getParcelable(ARG_TABLE_TOP);
        }
