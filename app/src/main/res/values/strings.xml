@@ -9,4 +9,5 @@
     <string name="numPlayersJuego">No Players</string>
     <string name="agesJuego">Ages</string>
     <string name="playingTimeJuego">Playing Time</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

@@ -13,8 +13,8 @@
         android:id="@+id/labelId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="76dp"
         android:text="@string/id_Juego"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,16 +27,19 @@
         android:layout_marginStart="56dp"
         android:layout_marginTop="40dp"
         android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toEndOf="@+id/labelId"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.754" />
 
     <TextView
         android:id="@+id/labelName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
         android:text="@string/nameJuego"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,17 +50,18 @@
         android:layout_width="254dp"
         android:layout_height="21dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/textDescription"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/labelName"
-        app:layout_constraintTop_toBottomOf="@+id/textID" />
+        app:layout_constraintHorizontal_bias="0.356"
+        app:layout_constraintStart_toEndOf="@+id/labelName" />
 
     <TextView
         android:id="@+id/labelDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
         android:text="@string/descriptionJuego"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,21 +69,24 @@
 
     <TextView
         android:id="@+id/textDescription"
-        android:layout_width="261dp"
-        android:layout_height="25dp"
+        android:layout_width="271dp"
+        android:layout_height="59dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginBottom="28dp"
+        android:ellipsize="end"
+        android:scrollHorizontally="true"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/textYear"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
-        app:layout_constraintStart_toEndOf="@+id/labelDescription"
-        app:layout_constraintTop_toBottomOf="@+id/textName" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/labelDescription" />
 
     <TextView
         android:id="@+id/labelYear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
         android:text="@string/yearJuego"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,18 +97,18 @@
         android:layout_width="276dp"
         android:layout_height="24dp"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/textPublisher"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.142"
-        app:layout_constraintStart_toEndOf="@+id/labelYear"
-        app:layout_constraintTop_toBottomOf="@+id/textDescription" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/labelYear" />
 
     <TextView
         android:id="@+id/labelPublisher"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
         android:text="@string/publisherJuego"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -112,17 +119,17 @@
         android:layout_width="264dp"
         android:layout_height="21dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginBottom="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/textCountry"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.142"
-        app:layout_constraintStart_toEndOf="@+id/labelPublisher"
-        app:layout_constraintTop_toBottomOf="@+id/textYear" />
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toEndOf="@+id/labelPublisher" />
 
     <TextView
         android:id="@+id/labelCountry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="44dp"
         android:text="@string/countryJuego"
         android:textSize="18sp"
@@ -134,17 +141,17 @@
         android:layout_width="247dp"
         android:layout_height="23dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/textNumPlayers"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.26"
-        app:layout_constraintStart_toEndOf="@+id/labelCountry"
-        app:layout_constraintTop_toBottomOf="@+id/textPublisher" />
+        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintStart_toEndOf="@+id/labelCountry" />
 
     <TextView
         android:id="@+id/labelNumPlayers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:text="@string/numPlayersJuego"
         android:textSize="18sp"
@@ -156,17 +163,17 @@
         android:layout_width="244dp"
         android:layout_height="28dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/textAges"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toEndOf="@+id/labelNumPlayers"
-        app:layout_constraintTop_toBottomOf="@+id/textCountry" />
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toEndOf="@+id/labelNumPlayers" />
 
     <TextView
         android:id="@+id/labelAges"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="32dp"
         android:text="@string/agesJuego"
         android:textSize="18sp"
@@ -178,46 +185,44 @@
         android:layout_width="242dp"
         android:layout_height="29dp"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/textPlayingTime"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.048"
-        app:layout_constraintStart_toEndOf="@+id/labelAges"
-        app:layout_constraintTop_toBottomOf="@+id/textNumPlayers" />
+        app:layout_constraintStart_toEndOf="@+id/labelAges" />
 
     <TextView
         android:id="@+id/labelPlayingTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="32dp"
         android:text="@string/playingTimeJuego"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/btnMapa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/labelAges"
-        app:layout_constraintVertical_bias="0.07" />
+        app:layout_constraintVertical_bias="0.032" />
 
     <TextView
         android:id="@+id/textPlayingTime"
         android:layout_width="212dp"
         android:layout_height="28dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toTopOf="@+id/btnMapa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/labelPlayingTime"
-        app:layout_constraintTop_toBottomOf="@+id/textAges"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toEndOf="@+id/labelPlayingTime" />
 
     <Button
         android:id="@+id/btnMapa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
+        android:layout_width="283dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="100dp"
         android:text="Ir a Mapa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintHorizontal_bias="0.257"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
