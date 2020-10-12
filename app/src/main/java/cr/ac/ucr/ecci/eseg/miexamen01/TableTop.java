@@ -8,7 +8,7 @@ import android.os.Parcelable;
 
 import java.util.ArrayList;
 import java.util.List;
-// Clase TableTop que tiene los atributos respectivos de la clase e implementa TableTop.
+// Clase TableTop que tiene los atributos respectivos de la clase
 public class TableTop implements Parcelable {
     private String id;
     private String name;

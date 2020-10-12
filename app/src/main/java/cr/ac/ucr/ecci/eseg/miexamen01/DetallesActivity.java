@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
+// Actividad que implementa el fragmento de detalles de cada uno de los juegos
 public class DetallesActivity extends AppCompatActivity {
 
     @Override

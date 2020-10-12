@@ -8,7 +8,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
-
+// Actividad que implementa el fragmento de la lista de juegos
 public class MainActivity extends AppCompatActivity {
 
     @Override
