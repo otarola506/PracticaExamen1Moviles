@@ -180,20 +180,20 @@ public class TableTop implements Parcelable {
         SQLiteDatabase db = dataBaseHelper.getWritableDatabase();
         // Crear un mapa de valores donde las columnas son las llaves
         ContentValues values = new ContentValues();
-        values.put(DatabaseContract.DataBaseEntry._ID, getId());
-        values.put(DatabaseContract.DataBaseEntry.COLUMN_NAME_NAME, getName());
-        values.put(DatabaseContract.DataBaseEntry.COLUMN_NAME_YEAR, getYear());
-        values.put(DatabaseContract.DataBaseEntry.COLUMN_NAME_PUBLISHER, getPublisher());
-        values.put(DatabaseContract.DataBaseEntry.COLUMN_NAME_COUNTRY, getCountry());
-        values.put(DatabaseContract.DataBaseEntry.COLUMN_NAME_LATITUDE, getLatitude());
-        values.put(DatabaseContract.DataBaseEntry.COLUMN_NAME_LONGITUDE, getLongitude());
-        values.put(DatabaseContract.DataBaseEntry.COLUMN_NAME_DESCRIPTION, getDescription());
-        values.put(DatabaseContract.DataBaseEntry.COLUMN_NAME_NUM_PLAYERS, getNumPlayers());
-        values.put(DatabaseContract.DataBaseEntry.COLUMN_NAME_AGES, getAges());
-        values.put(DatabaseContract.DataBaseEntry.COLUMN_NAME_PLAYING_TIME, getPlayingTime());
+        values.put(DataBaseContract.DataBaseEntry._ID, getId());
+        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_NAME, getName());
+        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_YEAR, getYear());
+        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_PUBLISHER, getPublisher());
+        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_COUNTRY, getCountry());
+        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_LATITUDE, getLatitude());
+        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_LONGITUDE, getLongitude());
+        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_DESCRIPTION, getDescription());
+        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_NUM_PLAYERS, getNumPlayers());
+        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_AGES, getAges());
+        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_PLAYING_TIME, getPlayingTime());
 
         // Insertar la nueva fila
-         db.insert(DatabaseContract.DataBaseEntry.TABLE_NAME_TABLE_TOP, null,
+         db.insert(DataBaseContract.DataBaseEntry.TABLE_NAME_TABLE_TOP, null,
                 values);
     }
 
@@ -205,22 +205,22 @@ public class TableTop implements Parcelable {
         // Define cuales columnas quiere solicitar
         // en este caso todas las de la clase
         String[] projection = {
-                DatabaseContract.DataBaseEntry._ID,
-                DatabaseContract.DataBaseEntry.COLUMN_NAME_NAME,
-                DatabaseContract.DataBaseEntry.COLUMN_NAME_YEAR,
-                DatabaseContract.DataBaseEntry.COLUMN_NAME_PUBLISHER,
-                DatabaseContract.DataBaseEntry.COLUMN_NAME_COUNTRY,
-                DatabaseContract.DataBaseEntry.COLUMN_NAME_LATITUDE,
-                DatabaseContract.DataBaseEntry.COLUMN_NAME_LONGITUDE,
-                DatabaseContract.DataBaseEntry.COLUMN_NAME_DESCRIPTION,
-                DatabaseContract.DataBaseEntry.COLUMN_NAME_NUM_PLAYERS,
-                DatabaseContract.DataBaseEntry.COLUMN_NAME_AGES,
-                DatabaseContract.DataBaseEntry.COLUMN_NAME_PLAYING_TIME
+                DataBaseContract.DataBaseEntry._ID,
+                DataBaseContract.DataBaseEntry.COLUMN_NAME_NAME,
+                DataBaseContract.DataBaseEntry.COLUMN_NAME_YEAR,
+                DataBaseContract.DataBaseEntry.COLUMN_NAME_PUBLISHER,
+                DataBaseContract.DataBaseEntry.COLUMN_NAME_COUNTRY,
+                DataBaseContract.DataBaseEntry.COLUMN_NAME_LATITUDE,
+                DataBaseContract.DataBaseEntry.COLUMN_NAME_LONGITUDE,
+                DataBaseContract.DataBaseEntry.COLUMN_NAME_DESCRIPTION,
+                DataBaseContract.DataBaseEntry.COLUMN_NAME_NUM_PLAYERS,
+                DataBaseContract.DataBaseEntry.COLUMN_NAME_AGES,
+                DataBaseContract.DataBaseEntry.COLUMN_NAME_PLAYING_TIME
 
         };
 
         // Resultados en el cursor
-        Cursor cursor = db.query(DatabaseContract.DataBaseEntry.TABLE_NAME_TABLE_TOP, //Tabla
+        Cursor cursor = db.query(DataBaseContract.DataBaseEntry.TABLE_NAME_TABLE_TOP, //Tabla
                 projection, // columnas
                 null, // where
                 null, // valores del where
@@ -236,17 +236,17 @@ public class TableTop implements Parcelable {
     }
     // Permite convertir un cursor pasado por parámetro a una lista de tipo TableTop
     public List<TableTop> convertirCursorALista(Cursor cursor){
-        int iId = cursor.getColumnIndex(DatabaseContract.DataBaseEntry._ID);
-        int iName = cursor.getColumnIndex(DatabaseContract.DataBaseEntry.COLUMN_NAME_NAME);
-        int iYear = cursor.getColumnIndex(DatabaseContract.DataBaseEntry.COLUMN_NAME_YEAR);
-        int iPublisher = cursor.getColumnIndex(DatabaseContract.DataBaseEntry.COLUMN_NAME_PUBLISHER);
-        int iCountry = cursor.getColumnIndex(DatabaseContract.DataBaseEntry.COLUMN_NAME_COUNTRY);
-        int iLatitude = cursor.getColumnIndex(DatabaseContract.DataBaseEntry.COLUMN_NAME_LATITUDE);
-        int iLongitude = cursor.getColumnIndex(DatabaseContract.DataBaseEntry.COLUMN_NAME_LONGITUDE);
-        int iDescription = cursor.getColumnIndex(DatabaseContract.DataBaseEntry.COLUMN_NAME_DESCRIPTION);
-        int iNumPlayers = cursor.getColumnIndex(DatabaseContract.DataBaseEntry.COLUMN_NAME_NUM_PLAYERS);
-        int iAges =  cursor.getColumnIndex(DatabaseContract.DataBaseEntry.COLUMN_NAME_AGES);
-        int iPlayingTime = cursor.getColumnIndex(DatabaseContract.DataBaseEntry.COLUMN_NAME_PLAYING_TIME);
+        int iId = cursor.getColumnIndex(DataBaseContract.DataBaseEntry._ID);
+        int iName = cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_NAME);
+        int iYear = cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_YEAR);
+        int iPublisher = cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_PUBLISHER);
+        int iCountry = cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_COUNTRY);
+        int iLatitude = cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_LATITUDE);
+        int iLongitude = cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_LONGITUDE);
+        int iDescription = cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_DESCRIPTION);
+        int iNumPlayers = cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_NUM_PLAYERS);
+        int iAges =  cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_AGES);
+        int iPlayingTime = cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_PLAYING_TIME);
 
         List<TableTop> listaDatos = new ArrayList<>();
         while (cursor.moveToNext()){
