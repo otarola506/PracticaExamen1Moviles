@@ -32,7 +32,7 @@
         app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toEndOf="@+id/labelId"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.654" />
+        app:layout_constraintVertical_bias="0.782" />
 
     <TextView
         android:id="@+id/labelName"
@@ -47,13 +47,13 @@
 
     <TextView
         android:id="@+id/textName"
-        android:layout_width="254dp"
+        android:layout_width="255dp"
         android:layout_height="21dp"
         android:layout_marginStart="24dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/textDescription"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.356"
+        app:layout_constraintHorizontal_bias="0.388"
         app:layout_constraintStart_toEndOf="@+id/labelName" />
 
     <TextView
@@ -94,13 +94,13 @@
 
     <TextView
         android:id="@+id/textYear"
-        android:layout_width="276dp"
-        android:layout_height="24dp"
+        android:layout_width="255dp"
+        android:layout_height="21dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/textPublisher"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.976"
+        app:layout_constraintHorizontal_bias="0.787"
         app:layout_constraintStart_toEndOf="@+id/labelYear" />
 
     <TextView
@@ -116,13 +116,13 @@
 
     <TextView
         android:id="@+id/textPublisher"
-        android:layout_width="264dp"
+        android:layout_width="255dp"
         android:layout_height="21dp"
         android:layout_marginStart="24dp"
         android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toTopOf="@+id/textCountry"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintHorizontal_bias="0.023"
         app:layout_constraintStart_toEndOf="@+id/labelPublisher" />
 
     <TextView
@@ -138,13 +138,13 @@
 
     <TextView
         android:id="@+id/textCountry"
-        android:layout_width="247dp"
-        android:layout_height="23dp"
+        android:layout_width="255dp"
+        android:layout_height="21dp"
         android:layout_marginStart="28dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/textNumPlayers"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toEndOf="@+id/labelCountry" />
 
     <TextView
@@ -160,13 +160,13 @@
 
     <TextView
         android:id="@+id/textNumPlayers"
-        android:layout_width="244dp"
-        android:layout_height="28dp"
+        android:layout_width="255dp"
+        android:layout_height="21dp"
         android:layout_marginStart="12dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="28dp"
         app:layout_constraintBottom_toTopOf="@+id/textAges"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintHorizontal_bias="0.023"
         app:layout_constraintStart_toEndOf="@+id/labelNumPlayers" />
 
     <TextView
@@ -182,13 +182,13 @@
 
     <TextView
         android:id="@+id/textAges"
-        android:layout_width="242dp"
-        android:layout_height="29dp"
+        android:layout_width="255dp"
+        android:layout_height="21dp"
         android:layout_marginStart="60dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="12dp"
         app:layout_constraintBottom_toTopOf="@+id/textPlayingTime"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toEndOf="@+id/labelAges" />
 
     <TextView
@@ -206,20 +206,20 @@
 
     <TextView
         android:id="@+id/textPlayingTime"
-        android:layout_width="212dp"
-        android:layout_height="28dp"
+        android:layout_width="255dp"
+        android:layout_height="21dp"
         android:layout_marginStart="12dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/btnMapa"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/labelPlayingTime" />
 
     <Button
         android:id="@+id/btnMapa"
         android:layout_width="283dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="76dp"
+        android:layout_marginBottom="92dp"
         android:text="Ir a Mapa Publisher"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

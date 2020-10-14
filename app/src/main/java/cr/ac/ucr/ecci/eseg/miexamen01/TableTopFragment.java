@@ -19,7 +19,6 @@ import java.util.List;
 // Fragmento Table Top que va mostrar la lista de juegos
 public class TableTopFragment extends Fragment {
 
-
     private static final String ARG_COLUMN_COUNT = "column-count";
     private int mColumnCount = 1;
 

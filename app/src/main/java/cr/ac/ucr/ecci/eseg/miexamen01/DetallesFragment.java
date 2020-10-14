@@ -77,6 +77,7 @@ public class DetallesFragment extends Fragment {
             TextView textPlayingTime = (TextView) v.findViewById(R.id.textPlayingTime);
             textPlayingTime.setText(tableTop.getPlayingTime());
 
+
             Button btnMapa = (Button) v.findViewById(R.id.btnMapa);
 
             btnMapa.setOnClickListener(new View.OnClickListener() {

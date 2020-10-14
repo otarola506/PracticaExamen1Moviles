@@ -32,7 +32,7 @@ public class MyTableTopRecyclerViewAdapter extends RecyclerView.Adapter<MyTableT
         return new ViewHolder(view);
     }
 
-    // Metódo que relaciona los text view de la lista con los de table top
+    // Metódo que relaciona los text view de la lista con los de  atributos de table top
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);

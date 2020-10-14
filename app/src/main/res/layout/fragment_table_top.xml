@@ -12,12 +12,14 @@
         android:layout_margin="@dimen/text_margin"
         android:text="Nombre"
         android:textAppearance="?attr/textAppearanceListItem" />
+
     <TextView
         android:id="@+id/descripcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Descripcion"
         android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem" />
+        android:text="Descripcion"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="14sp" />
 
 </LinearLayout>

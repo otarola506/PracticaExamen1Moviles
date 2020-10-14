@@ -7,9 +7,11 @@ public class DatabaseContract {
 
     public static class DataBaseEntry implements BaseColumns {
         // Clase TableTop
+        // Defino el nombre de la tabla
         public static final String TABLE_NAME_TABLE_TOP = "TableTop";
         // PRIMARY KEY de cada una de las filas definimos que el ID de la fila sea DataBaseEntry._ID ; Utilizamos DataBaseEntry._ID de BaseColumns
 
+        // Defino el nombre de las distintas columnas (atributos de clase) que están en la BD
         public static final String COLUMN_NAME_NAME = "name";
 
         public static final String COLUMN_NAME_YEAR = "year";
@@ -40,6 +42,7 @@ public class DatabaseContract {
 
     // Creación de comandos SQL
 
+    // Comando de creación de tabla
     public static final String SQL_CREATE_TABLE_TOP =
             "CREATE TABLE " + DataBaseEntry.TABLE_NAME_TABLE_TOP + " (" +
                     DataBaseEntry._ID + TEXT_TYPE + "PRIMARY KEY," +
@@ -56,6 +59,7 @@ public class DatabaseContract {
                     DataBaseEntry.COLUMN_NAME_AGES + TEXT_TYPE + COMMA_SEP +
                     DataBaseEntry.COLUMN_NAME_PLAYING_TIME + TEXT_TYPE + " )";
 
+    // Comando de borrado de tabla
     public static final String SQL_DELETE_TABLE_TOP =
             "DROP TABLE IF EXISTS " + DataBaseEntry.TABLE_NAME_TABLE_TOP;
 
